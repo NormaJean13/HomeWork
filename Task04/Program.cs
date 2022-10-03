@@ -1,26 +1,25 @@
-﻿// Задача 4: Напишите программу, которая принимает на
-// вход три числа и выдаёт максимальное из этих чисел.
+﻿// Задача 8: Напишите программу, которая на вход принимает число (N), а на выходе показывает все чётные числа от 1 до N.
+// 5 -> 2, 4
+// 8 -> 2, 4, 6, 8
 
 Console.Clear();
-Console.WriteLine("Введите первое число ");
-int num1 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите второе число ");
-int num2 = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Введите третье число ");
-int num3 = Convert.ToInt32(Console.ReadLine());
-if (num1 > num2 && num1 > num3)
+Console.WriteLine("Введите свое число ");
+int num = Convert.ToInt32(Console.ReadLine());
+int count = 1;
+while (num <= 2)
 {
-    Console.WriteLine($"{num1} - большее число");
+    Console.WriteLine("Введите другое число ");
+    num = Convert.ToInt32(Console.ReadLine());
 }
-else if (num2 > num1 && num2 > num3)
+while (count < num)
 {
-    Console.WriteLine($"{num2} - большее число");
-}
-else if (num3 > num1 && num3 > num2)
-{
-    Console.WriteLine($"{num3} - большее число");
-}
-else
-{
-    Console.WriteLine("Что-то не так");
+    if (count % 2 == 0)
+    {
+        Console.Write($" {count}");
+        count = (count + 2);
+    }
+    else if (count % 2 == 1)
+    {
+        count = count + 1;
+    }
 }
